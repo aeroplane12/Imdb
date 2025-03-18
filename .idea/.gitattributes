@@ -1,0 +1,21 @@
+# Ensure consistent line endings across different platforms
+* text=auto
+
+# Treat Java files as text (to avoid issues with binary files)
+*.java text
+
+# Handle line endings for Windows and Linux/macOS
+# Windows will store line endings as CRLF, and other systems will use LF
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# Merge settings for certain file types (e.g., for images, avoid merging)
+*.png binary
+*.jpg binary
+*.jpeg binary
+
+# Custom diff settings (e.g., for specific file types, provide custom diff algorithm)
+*.md diff=markdown
+
+# Force Git to treat files as binary
+*.pdf binary
